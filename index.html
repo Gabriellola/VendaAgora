@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda com IA - Aprenda a vender usando Inteligência Artificial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .neon-border {
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .neon-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        
+        .neon-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+        
+        .purple-glow {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+        }
+        
+        .green-glow {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-2xl text-cyan-400"></i>
+                <span class="text-xl font-bold text-white">VENDA<span class="text-cyan-400">COMIA</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#benefits" class="text-gray-300 hover:text-cyan-400 transition">Benefícios</a>
+                <a href="#content" class="text-gray-300 hover:text-cyan-400 transition">Conteúdo</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-cyan-400 transition">Depoimentos</a>
+            </div>
+            <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded-full font-medium transition neon-button">
+                Comprar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-cyan-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="relative">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-900 bg-opacity-50 rounded-full mb-4">LANÇAMENTO EXCLUSIVO</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 neon-text">
+                            <span class="gradient-text">Venda com IA</span> — Aprenda a usar a Inteligência Artificial para Vender Todos os Dias
+                        </h1>
+                        <p class="text-xl text-gray-300 mb-8">
+                            Descubra como transformar a IA em sua maior aliada nas vendas online. Ebook completo, prático e direto ao ponto.
+                        </p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-bold text-lg transition neon-button pulse flex items-center justify-center">
+                                <span>Quero Aprender Agora</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="mt-8 p-4 bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 max-w-md">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-clock text-cyan-400 text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-300">Oferta por tempo limitado! Apenas <span class="font-bold text-white" id="countdown">23:59:59</span> restantes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative floating">
+                    <div class="absolute inset-0 bg-cyan-500 rounded-2xl transform rotate-6"></div>
+                    <div class="relative bg-gray-900 rounded-2xl p-6 w-64 h-80 md:w-80 md:h-96 neon-border">
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-900 h-full rounded-lg flex flex-col items-center justify-center p-6">
+                            <div class="mb-6">
+                                <i class="fas fa-robot text-6xl text-cyan-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center text-white mb-2">Venda com IA</h3>
+                            <p class="text-center text-gray-400">O guia definitivo para vendas automatizadas</p>
+                            <div class="mt-6 w-full">
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-cyan-500 rounded-full w-3/4"></div>
+                                </div>
+                                <p class="text-xs text-gray-400 mt-1">Carregando conhecimento...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-900 bg-opacity-50 rounded-full mb-4">EFICIÊNCIA TECNOLÓGICA</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Por que usar a IA para vender?</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">A inteligência artificial está revolucionando o mercado de vendas. Descubra como você pode se beneficiar.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-cyan-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-cyan-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-2xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Automatize suas vendas 24h por dia</h3>
+                    <p class="text-gray-400">Configure sistemas que trabalham para você mesmo enquanto dorme, atendendo clientes e fechando negócios automaticamente.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-purple-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-purple-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Descubra as ferramentas que os experts usam</h3>
+                    <p class="text-gray-400">Acesso às mesmas plataformas de IA utilizadas pelos maiores vendedores digitais, com tutoriais passo a passo.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-green-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-green-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Aprenda com estratégias práticas e atualizadas</h3>
+                    <p class="text-gray-400">Métodos testados e comprovados que funcionam no mercado atual, sem teoria desnecessária - apenas o que realmente gera resultados.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-cyan-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-cyan-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-2xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Economize tempo, aumente lucros</h3>
+                    <p class="text-gray-400">Reduza horas de trabalho repetitivo e foque no que realmente importa, enquanto a IA cuida dos processos operacionais.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-purple-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-purple-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comment-alt text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Domine o ChatGPT e outras IAs para criar textos que vendem</h3>
+                    <p class="text-gray-400">Aprenda prompts e técnicas profissionais para gerar copywriting persuasivo em segundos, aumentando suas taxas de conversão.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition duration-300 feature-card hover:border-green-500 border border-gray-700">
+                    <div class="w-14 h-14 bg-green-900 bg-opacity-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-2xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Vantagem competitiva no mercado</h3>
+                    <p class="text-gray-400">Enquanto outros ainda vendem de forma tradicional, você estará anos à frente utilizando as tecnologias mais avançadas.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-bold transition neon-button">
+                    Quero Minha Vantagem Competitiva
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content" class="py-20 px-4 bg-black">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-purple-400 bg-purple-900 bg-opacity-50 rounded-full mb-4">CONHECIMENTO PRÁTICO</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">O que você vai encontrar neste ebook</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Um conteúdo denso e prático, sem enrolação, focado em resultados reais.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Content Item 1 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-cyan-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-search-dollar text-xl text-cyan-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Como encontrar produtos que vendem</h3>
+                        <p class="text-gray-400">Métodos baseados em IA para identificar tendências e nichos lucrativos antes que saturem o mercado.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Item 2 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-purple-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-ad text-xl text-purple-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Como usar a IA para criar anúncios irresistíveis</h3>
+                        <p class="text-gray-400">Técnicas avançadas de copywriting com IA que aumentam drasticamente suas taxas de clique e conversão.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Item 3 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-green-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-funnel-dollar text-xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Como montar funis de venda automáticos com IA</h3>
+                        <p class="text-gray-400">Sistemas completos que nutrem leads e convertem em clientes sem intervenção manual.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Item 4 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-cyan-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-xl text-cyan-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Automação para Instagram, WhatsApp e tráfego pago</h3>
+                        <p class="text-gray-400">Integrações poderosas que transformam suas redes sociais em máquinas de vendas 24/7.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Item 5 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-purple-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-brain text-xl text-purple-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Prompt engineering para vendas</h3>
+                        <p class="text-gray-400">Os comandos exatos para obter os melhores resultados de ferramentas como ChatGPT, Bard e outras.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Item 6 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 flex">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 bg-green-900 bg-opacity-50 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-pie text-xl text-green-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Análise de dados e otimização com IA</h3>
+                        <p class="text-gray-400">Como interpretar métricas complexas e tomar decisões baseadas em dados para maximizar seus lucros.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="inline-block p-1 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500">
+                    <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="block px-8 py-3 bg-gray-900 rounded-full font-bold text-white hover:bg-gray-800 transition">
+                        <span>Quero Acessar Todo Este Conteúdo</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-green-400 bg-green-900 bg-opacity-50 rounded-full mb-4">RESULTADOS REAIS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Veja o que quem já comprou está dizendo</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Depoimentos de alunos que aplicaram os métodos do ebook e transformaram seus negócios.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 testimonial-card border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-white">Ana Carolina</h4>
+                            <p class="text-cyan-400">Empreendedora Digital</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">"Em 3 semanas consegui automatizar 80% do meu processo de vendas. Antes trabalhava 10h por dia, agora trabalho 2h com resultados melhores. O capítulo sobre ChatGPT para copywriting mudou completamente meu negócio."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 testimonial-card border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ricardo">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-white">Ricardo Almeida</h4>
+                            <p class="text-purple-400">Consultor de Marketing</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">"Já trabalhava com marketing digital há anos, mas as técnicas de IA apresentadas neste ebook me mostraram que estava ficando para trás. Implementei os funis automáticos e meu faturamento mensal aumentou 3x com menos trabalho."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 testimonial-card border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Fernanda">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-white">Fernanda Souza</h4>
+                            <p class="text-green-400">Afiliada Digital</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 italic">"Comecei do zero e em 2 meses já estava faturando R$8.000/mês seguindo o passo a passo do ebook. As ferramentas de IA para encontrar produtos vencedores e criar anúncios são um divisor de águas para quem está começando."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                <div class="relative z-10">
+                    <div class="text-center mb-8">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-green-400 bg-green-900 bg-opacity-50 rounded-full mb-4">GARANTIA TOTAL</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Garanta sua cópia com total segurança</h2>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-shield-alt text-3xl text-green-400"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-xl font-bold text-white">Garantia de 7 Dias</h3>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300">Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-lock text-3xl text-cyan-400"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-xl font-bold text-white">Compra Segura</h3>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300">Seu pagamento é processado através de plataforma segura com criptografia de dados. Suas informações financeiras estão sempre protegidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center">
+                        <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="inline-block bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-lg">
+                            <span>Quero Começar Agora com a IA</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <p class="text-sm text-gray-400 mt-4">Pagamento único • Acesso imediato • Suporte 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-black">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-xs font-semibold text-purple-400 bg-purple-900 bg-opacity-50 rounded-full mb-4">DÚVIDAS FREQUENTES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Perguntas Frequentes</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-bold text-white">Para quem é este ebook?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300" id="faq-icon-1"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden" id="faq-content-1">
+                        <p>Este ebook é perfeito para: empreendedores digitais, afiliados, donos de e-commerce, consultores, freelancers e qualquer pessoa que queira vender mais usando tecnologia de ponta. Não é necessário ter conhecimento prévio em IA - explicamos tudo do zero.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-bold text-white">Quanto tempo leva para ver resultados?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300" id="faq-icon-2"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden" id="faq-content-2">
+                        <p>Os primeiros resultados podem aparecer em questão de dias, especialmente nas técnicas de copywriting com IA. Para sistemas mais complexos de automação, o tempo médio de implementação é de 2-3 semanas. Quanto mais cedo você começar, mais rápido verá os resultados.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(3)">
+                        <h3 class="text-lg font-bold text-white">Preciso pagar por ferramentas caras?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300" id="faq-icon-3"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden" id="faq-content-3">
+                        <p>Não! Ensinamos a usar tanto ferramentas gratuitas (como ChatGPT) quanto opções premium, mas sempre com foco no melhor custo-benefício. Você pode começar sem investir em nada além do ebook e depois escalar conforme seus resultados crescem.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(4)">
+                        <h3 class="text-lg font-bold text-white">Como recebo o acesso após a compra?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300" id="faq-icon-4"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden" id="faq-content-4">
+                        <p>O acesso é imediato! Após a confirmação do pagamento, você receberá um email com os dados para acessar a área de membros, onde poderá baixar o ebook em PDF e todos os materiais complementares. O formato é compatível com qualquer dispositivo.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(5)">
+                        <h3 class="text-lg font-bold text-white">Há suporte para tirar dúvidas?</h3>
+                        <i class="fas fa-chevron-down text-cyan-400 transition-transform duration-300" id="faq-icon-5"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden" id="faq-content-5">
+                        <p>Sim! Oferecemos suporte por email e também temos um grupo exclusivo no Telegram onde você pode interagir com outros alunos e nossa equipe. Respondemos todas as dúvidas em até 24h.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-bold transition neon-button">
+                    <span>Quero Meu Ebook Agora</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 px-4 bg-gradient-to-r from-cyan-900 to-purple-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Não Fique Para Trás na Revolução das Vendas com IA</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Enquanto você hesita, seus concorrentes já estão implementando essas estratégias. Comece hoje mesmo a transformar seu negócio.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://pay.kirvano.com/91390d3d-3c40-46c0-aa17-8e4da84c3329" class="bg-white hover:bg-gray-100 text-cyan-800 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-lg flex items-center justify-center">
+                    <span>Quero Aprender a Vender com IA</span>
+                    <i class="fas fa-robot ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="mt-8">
+                <div class="inline-flex items-center px-4 py-2 bg-black bg-opacity-30 rounded-full">
+                    <i class="fas fa-lock text-white mr-2"></i>
+                    <span class="text-white text-sm">Pagamento 100% seguro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-robot text-2xl text-cyan-400"></i>
+                        <span class="text-xl font-bold text-white">VENDA<span class="text-cyan-400">COMIA</span></span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Transformando vendas com inteligência artificial</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center md:text-left">
+                    <div>
+                        <h4 class="text-white font-bold mb-3">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Termos de Uso</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition">Suporte</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-bold mb-3">Contato</h4>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400"><i class="fas fa-envelope mr-2 text-cyan-400"></i> contato@vendacomia.com</li>
+                            <li class="text-gray-400"><i class="fas fa-globe mr-2 text-purple-400"></i> www.vendacomia.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Venda com IA. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Toggle
+        function toggleFAQ(number) {
+            const content = document.getElementById(`faq-content-${number}`);
+            const icon = document.getElementById(`faq-icon-${number}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('transform', 'rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('transform', 'rotate-180');
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.feature-card, .testimonial-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.feature-card, .testimonial-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=gblolivera/vendacomiaultimo" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
